@@ -259,12 +259,18 @@ h2 {
 /* Kuva kortin sisällä */
 .timeline-image {
   display: block;
-  max-width: 680px; /* ← TÄRKEÄ */
-  width: auto; /* ← EI 100% */
-  height: auto;
-  margin: 1.25rem auto 0;
+
+  width: auto;
+  max-width: 560px; /* ⬅️ isompi kuin nyt */
+  max-height: 320px; /* ⬅️ antaa kuvalle hengitystilaa */
+
+  object-fit: contain;
+
+  margin: 1rem auto 0;
   border-radius: 10px;
   border: 1px solid var(--border);
+
+  opacity: 0.95;
 }
 
 /* Pieni hover (ei pakollinen, mutta tyylikäs) */
