@@ -259,16 +259,20 @@ h2 {
 /* Kuva kortin sisällä */
 .timeline-image {
   display: block;
-  width: 100%;
-  max-width: 520px; /* ⬅️ TÄMÄ on tärkein raja */
-  max-height: 320px; /* estää liian korkeat kuvat */
+
+  /* 🔒 KOVAT RAJAT */
+  width: auto;
+  max-width: 420px; /* ← pienempi kuin ennen */
+  max-height: 240px; /* ← tämä tekee eron */
+
   object-fit: contain;
 
-  margin-top: 1rem;
-  border-radius: 10px;
+  margin: 0.75rem 0 0; /* vähemmän tilaa */
+  border-radius: 8px;
   border: 1px solid var(--border);
-  background: #000;
-  opacity: 0.95;
+
+  /* tekee kuvasta kevyemmän */
+  opacity: 0.9;
 }
 
 /* Pieni hover (ei pakollinen, mutta tyylikäs) */
