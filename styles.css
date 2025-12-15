@@ -128,13 +128,15 @@ h2 {
 
 .expertise-card {
   background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border: 1px solid rgba(194, 181, 155, 0.35); /* lämmin, hillitty kehys */
+  border-radius: 12px;
   min-height: 360px;
   padding: 2rem;
 
   display: flex;
   flex-direction: column;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 .expertise-card h3 {
