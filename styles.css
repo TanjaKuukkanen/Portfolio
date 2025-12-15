@@ -260,19 +260,17 @@ h2 {
 .timeline-image {
   display: block;
 
-  /* 🔒 KOVAT RAJAT */
   width: auto;
-  max-width: 420px; /* ← pienempi kuin ennen */
-  max-height: 240px; /* ← tämä tekee eron */
+  max-width: 560px; /* ⬅️ isompi kuin nyt */
+  max-height: 320px; /* ⬅️ antaa kuvalle hengitystilaa */
 
   object-fit: contain;
 
-  margin: 0.75rem 0 0; /* vähemmän tilaa */
-  border-radius: 8px;
+  margin: 1rem auto 0;
+  border-radius: 10px;
   border: 1px solid var(--border);
 
-  /* tekee kuvasta kevyemmän */
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* Pieni hover (ei pakollinen, mutta tyylikäs) */
