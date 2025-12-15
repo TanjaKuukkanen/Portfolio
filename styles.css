@@ -260,10 +260,14 @@ h2 {
 .timeline-image {
   display: block;
   width: 100%;
-  height: auto;
+  max-width: 520px; /* ⬅️ TÄMÄ on tärkein raja */
+  max-height: 320px; /* estää liian korkeat kuvat */
+  object-fit: contain;
+
   margin-top: 1rem;
   border-radius: 10px;
   border: 1px solid var(--border);
+  background: #000;
 }
 
 /* Pieni hover (ei pakollinen, mutta tyylikäs) */
