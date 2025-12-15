@@ -11,33 +11,36 @@
 </head>
 
 <body>
+
+  <!-- NAVIGAATIO -->
   <header class="site-header">
     <div class="nav-container">
-
+      <div class="nav-logo">Portfolio</div>
       <nav class="nav">
         <a href="#osaaminen">Osaaminen</a>
-        <a href="#otsikko">Otsikko</a>
+        <a href="#projekti">Projekti</a>
         <a href="#yhteystiedot">Yhteystiedot</a>
       </nav>
     </div>
   </header>
 
-  <!-- YLÄOSA / HERO -->
   <main class="container">
 
+    <!-- HERO -->
     <section class="hero">
       <h1>Tanja Kuukkanen</h1>
       <p class="hero-role">Tietojenkäsittelyn tradenomiopiskelija</p>
 
-      <div class="rotating-frame profile-frame">
-        <aside class="profile-card" aria-labelledby="profile-name">
+      <div class="profile-frame">
+        <aside class="profile-card">
           <figure class="profile-card__figure">
-            <img class="profile-card__avatar" src="images/avatar-placeholder.svg" alt="Portrait of Tanja Kuukkanen"
-              loading="lazy" width="180" height="180">
+            <img class="profile-card__avatar" src="images/avatar-placeholder.svg" alt="Kuva Tanjasta" loading="lazy"
+              width="180" height="180">
           </figure>
           <div class="profile-card__meta">
-            <h2 id="profile-name" class="profile-card__name">Tanja Kuukkanen</h2>
-            <p class="profile-card__title">Tietojenkäsittelyn tradenomiopiskelija</p>
+            <p class="profile-card__title">
+              Tietojenkäsittelyn tradenomiopiskelija
+            </p>
           </div>
         </aside>
       </div>
@@ -45,9 +48,11 @@
 
     <!-- OSAAMINEN / 3 KOLUMNIA -->
     <section id="osaaminen">
+      <h2>Osaaminen</h2>
+
       <div class="expertise-grid">
 
-        <article class="expertise-card rotating-frame">
+        <article class="expertise-card">
           <h3>Product Owner</h3>
           <p>tähän tekstiä</p>
           <ul>
@@ -57,7 +62,7 @@
           </ul>
         </article>
 
-        <article class="expertise-card rotating-frame">
+        <article class="expertise-card">
           <h3>Pilvipalvelut</h3>
           <p>tähän tekstiä</p>
           <ul>
@@ -67,7 +72,7 @@
           </ul>
         </article>
 
-        <article class="expertise-card rotating-frame">
+        <article class="expertise-card">
           <h3>Liiketoiminta</h3>
           <p>tähän tekstiä</p>
           <ul>
@@ -80,7 +85,24 @@
       </div>
     </section>
 
+
+    <section id="projekti">
+      <h2>Projektikokemus</h2>
+      <p>tähän tekstiä</p>
+    </section>
+
+    <!-- YHTEYSTIEDOT -->
+    <section id="yhteystiedot">
+      <h2>Yhteystiedot</h2>
+      <p>tähän tekstiä</p>
+    </section>
+
   </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 Tanja Kuukkanen</p>
+  </footer>
 
 </body>
 
