@@ -1,3 +1,6 @@
+/* =========================
+   VÄRIT – YKSI LÄMMIN TEEMA
+   ========================= */
 :root {
   --bg: #12110f;
   --card-bg: #1c1b18;
@@ -6,9 +9,12 @@
   --text: #f0eee9;
   --muted: #b3afa6;
 
-  --accent: #c2b59b; /* lämmin beige/stone */
+  --accent: #c2b59b; /* lämmin beige / stone */
 }
 
+/* =========================
+   RESET & PERUS
+   ========================= */
 * {
   box-sizing: border-box;
 }
@@ -25,40 +31,15 @@ body {
   line-height: 1.6;
 }
 
+/* =========================
+   LAYOUT
+   ========================= */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.25rem;
 }
 
-/* HEADER */
-.site-header {
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--border);
-}
-
-.site-header h1 {
-  margin: 0;
-}
-
-.tagline {
-  margin: 0.25rem 0 0.75rem;
-  color: var(--muted);
-}
-
-.nav a {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
-}
-
-/* HERO */
-.hero {
-  margin-top: 2rem;
-}
-
-/* SECTIONS */
 section {
   margin-top: 3rem;
   scroll-margin-top: 90px;
@@ -68,110 +49,15 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* EXPERTISE GRID */
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 1.25rem;
-}
-
-.expertise-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  min-height: 360px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.expertise-card h3 {
-  margin-top: 0;
-}
-
-.expertise-card ul {
-  padding-left: 1.1rem;
-  margin-top: auto;
-}
-
-.expertise-card li {
-  margin-bottom: 0.4rem;
-}
-
-/* aws highlight */
-.expertise-card.highlight {
-  border-color: var(--accent);
-  background: linear-gradient(
-    180deg,
-    var(--card-bg),
-    rgba(255, 255, 255, 0.02)
-  );
-}
-
-/* FOOTER */
-.site-footer {
-  margin-top: 4rem;
-  padding: 1.5rem 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--border);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .expertise-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0e0f11;
-    --card-bg: #16181c;
-    --border: #24262b;
-
-    --text: #e6e6e6;
-    --muted: #a1a1a6;
-
-    --accent: #8f8f94;
-  }
-}
-
-/* HERO */
-.hero {
-  margin: 4rem 0 3rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.hero-role {
-  margin-top: 0.75rem;
-  font-size: 1.1rem;
-  color: var(--muted);
-}
-
-/* hiukan enemmän tilaa ennen kolumneja */
-#osaaminen {
-  margin-top: 3rem;
-}
-
-/* NAVIGAATIO */
+/* =========================
+   NAVIGAATIO
+   ========================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  background: rgba(14, 15, 17, 0.9); /* fallback */
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-
-  backdrop-filter: blur(8px);
+  background: var(--card-bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -198,4 +84,92 @@ h2 {
 
 .nav a:hover {
   color: var(--accent);
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  margin: 4rem 0 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-role {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* =========================
+   OSAAMINEN / KOLUMNIT
+   ========================= */
+#osaaminen {
+  margin-top: 3rem;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.expertise-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-height: 360px;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-card h3 {
+  margin-top: 0;
+}
+
+.expertise-card ul {
+  padding-left: 1.1rem;
+  margin-top: auto;
+}
+
+.expertise-card li {
+  margin-bottom: 0.4rem;
+}
+
+/* Korostettu kortti (AWS) */
+.expertise-card.highlight {
+  border-color: var(--accent);
+  background: linear-gradient(
+    180deg,
+    var(--card-bg),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
 }
