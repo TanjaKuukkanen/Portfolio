@@ -120,8 +120,13 @@ h2 {
 }
 
 .expertise-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    var(--card-bg),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid var(--accent);
   border-radius: 10px;
   min-height: 360px;
   padding: 2rem;
@@ -141,16 +146,6 @@ h2 {
 
 .expertise-card li {
   margin-bottom: 0.4rem;
-}
-
-/* Korostettu kortti (AWS) */
-.expertise-card.highlight {
-  border-color: var(--accent);
-  background: linear-gradient(
-    180deg,
-    var(--card-bg),
-    rgba(255, 255, 255, 0.02)
-  );
 }
 
 /* =========================
