@@ -184,6 +184,29 @@
       </div>
     </section>
 
+    <section id="naytteet" class="carousel-section">
+      <h2>Kuvia sovelluksesta</h2>
+
+      <p>
+        Alla on valikoituja kuvia projektin lopputuloksesta.
+        Voit selata kuvia nuolipainikkeilla.
+      </p>
+
+      <div class="carousel-card">
+
+        <button class="carousel-btn prev" aria-label="Edellinen kuva">
+          ‹
+        </button>
+
+        <img src="images/etusivu.png" alt="Kuva sovelluksesta" class="carousel-image">
+
+        <button class="carousel-btn next" aria-label="Seuraava kuva">
+          ›
+        </button>
+
+      </div>
+    </section>
+
 
     <section id="projekti">
       <h2>Projektikokemus</h2>
@@ -204,13 +227,17 @@
   </footer>
 
   <script>
-    const images = document.querySelectorAll('.timeline-image');
+    /* ===============================
+       TIMELINE IMAGE ENLARGE
+       =============================== */
 
-    images.forEach(img => {
+    const timelineImages = document.querySelectorAll('.timeline-image');
+
+    timelineImages.forEach(img => {
       img.addEventListener('click', () => {
         const isEnlarged = img.classList.contains('enlarged');
 
-        images.forEach(i => i.classList.remove('enlarged'));
+        timelineImages.forEach(i => i.classList.remove('enlarged'));
 
         if (!isEnlarged) {
           img.classList.add('enlarged');
@@ -218,7 +245,41 @@
       });
     });
 
+    /* ===============================
+       IMAGE CAROUSEL
+       =============================== */
+
+    const carouselImages = [
+      'images/etusivu.png',
+      'images/ilmoitus.png',
+      'images/ostoskori.png'
+    ];
+
+    let currentIndex = 0;
+
+    const carouselImageEl = document.querySelector('.carousel-image');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+
+    if (carouselImageEl && prevBtn && nextBtn) {
+      function updateCarouselImage() {
+        carouselImageEl.src = carouselImages[currentIndex];
+      }
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex =
+          (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+        updateCarouselImage();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex =
+          (currentIndex + 1) % carouselImages.length;
+        updateCarouselImage();
+      });
+    }
   </script>
+
 
 </body>
 

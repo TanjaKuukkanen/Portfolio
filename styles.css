@@ -306,6 +306,62 @@ h2 {
   cursor: zoom-out;
 }
 
+.carousel-card {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+}
+
+.carousel-image {
+  width: 100%;
+  display: block;
+}
+
+/* Nuolinapit */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.carousel-btn.prev {
+  left: 0.5rem;
+}
+
+.carousel-btn.next {
+  right: 0.5rem;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-links a {
+  color: #cfc6b4; /* sama sävy kuin profiilikuvassa */
+  font-size: 1.8rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 /* RESPONSIVE: timeline toimii myös mobiilissa */
 @media (max-width: 900px) {
   .timeline {
@@ -324,21 +380,4 @@ h2 {
   .timeline-marker {
     margin-left: 0.15rem;
   }
-}
-
-.social-links {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1.2rem;
-}
-
-.social-links a {
-  color: #cfc6b4; /* sama sävy kuin profiilikuvassa */
-  font-size: 1.8rem;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.social-links a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
 }
