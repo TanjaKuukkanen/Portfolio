@@ -208,10 +208,16 @@
 
     images.forEach(img => {
       img.addEventListener('click', () => {
+        const isEnlarged = img.classList.contains('enlarged');
+
         images.forEach(i => i.classList.remove('enlarged'));
-        img.classList.toggle('enlarged');
+
+        if (!isEnlarged) {
+          img.classList.add('enlarged');
+        }
       });
     });
+
   </script>
 
 </body>
