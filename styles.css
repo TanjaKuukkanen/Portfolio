@@ -308,13 +308,13 @@ h2 {
 
 .carousel-card {
   position: relative;
+  width: 100%;
   max-width: 600px;
+  height: 380px;
   margin: 2rem auto;
   border-radius: 16px;
   overflow: hidden;
   background: #111;
-
-  height: 380px;
 }
 
 .carousel-image {
@@ -322,6 +322,7 @@ h2 {
   height: 100%;
   display: contain;
   object-fit: cover;
+  background: #111;
 }
 
 /* Nuolinapit */
