@@ -328,7 +328,7 @@ h2 {
   pointer-events: none;
 }
 .carousel-ci-cd .carousel-image {
-  pointer-events: auto; ✅
+  pointer-events: auto;
   cursor: zoom-in;
 }
 
@@ -369,10 +369,9 @@ h2 {
 
 .carousel-ci-cd .enlargeable.enlarged {
   transform: scale(1.8);
-  z-index: 5;
+  z-index: 15;
   cursor: zoom-out;
 }
-
 
 .social-links {
   margin-top: 1rem;

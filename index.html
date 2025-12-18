@@ -247,22 +247,25 @@
 
   <script>
     /* ===============================
-       TIMELINE IMAGE ENLARGE
-       =============================== */
+   IMAGE ENLARGE (timeline + CI/CD carousel)
+   =============================== */
 
-    const timelineImages = document.querySelectorAll('.timeline-image');
+    const enlargeables = document.querySelectorAll('.enlargeable, .timeline-image');
 
-    timelineImages.forEach(img => {
-      img.addEventListener('click', () => {
+    enlargeables.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation(); // estää nappeja sekoittumasta
+
         const isEnlarged = img.classList.contains('enlarged');
 
-        timelineImages.forEach(i => i.classList.remove('enlarged'));
+        enlargeables.forEach(i => i.classList.remove('enlarged'));
 
         if (!isEnlarged) {
           img.classList.add('enlarged');
         }
       });
     });
+
 
     /* ===============================
        CI/CD CAROUSEL
