@@ -256,6 +256,27 @@ h2 {
   margin-bottom: 0.35rem;
 }
 
+.timeline-split {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.timeline-text {
+  flex: 1;
+  max-width: 520px;
+}
+.timeline-text p {
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.timeline-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 /* Kuva kortin sisällä */
 .timeline-image {
   display: block;
@@ -390,6 +411,15 @@ h2 {
   .timeline-marker {
     margin-left: 0.15rem;
   }
+}
+.timeline-split {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-text,
+.timeline-visual {
+  max-width: 100%;
 }
 
 @media (max-width: 600px) {
