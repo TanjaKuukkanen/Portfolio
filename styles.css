@@ -259,19 +259,12 @@ h2 {
 /* Kuva kortin sisällä */
 .timeline-image {
   display: block;
-
-  width: auto;
-  max-width: 560px; /* ⬅️ isompi kuin nyt */
   max-height: 320px; /* ⬅️ antaa kuvalle hengitystilaa */
-
   object-fit: contain;
-
   margin: 1rem auto 0;
   border-radius: 10px;
   border: 1px solid var(--border);
-
   opacity: 0.95;
-
   cursor: zoom-in;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   max-width: 100%;
@@ -287,22 +280,6 @@ h2 {
   z-index: 10;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  cursor: zoom-out;
-}
-
-.image-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.image-overlay img {
-  max-width: 90%;
-  max-height: 90%;
   cursor: zoom-out;
 }
 
