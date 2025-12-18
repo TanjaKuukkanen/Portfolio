@@ -282,6 +282,27 @@ h2 {
   min-height: 300px;
 }
 
+.timeline-card.highlight h3 {
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card .lead {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.timeline-card .key-points {
+  margin-top: 0.75rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.timeline-card .key-points li {
+  margin-bottom: 0.35rem;
+}
+
 /* Kuva kortin sisällä */
 .timeline-image {
   display: block;
