@@ -276,14 +276,8 @@ h2 {
   flex: 1;
   display: flex;
   justify-content: center;
-}
-
-.timeline-text {
-  background: rgba(255, 0, 0, 0.1);
-}
-
-.timeline-visual {
-  background: rgba(0, 0, 255, 0.1);
+  align-items: center;
+  min-height: 300px;
 }
 
 /* Kuva kortin sisällä */
