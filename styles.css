@@ -359,7 +359,7 @@ h2 {
   z-index: 1;
 }
 
-.carousel-ci-cd .carousel-image {
+.carousel-card .carousel-image {
   pointer-events: auto;
   cursor: zoom-in;
 }
