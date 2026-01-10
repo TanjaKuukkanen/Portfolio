@@ -463,7 +463,7 @@
       IMAGE ENLARGE (OVERLAY – FINAL)
       =============================== */
 
-    document.querySelectorAll('.timeline-image, .carousel-ci-cd .carousel-image')
+    document.querySelectorAll('.timeline-image, .carousel-card .carousel-image')
       .forEach(img => {
         img.addEventListener('click', (e) => {
           e.preventDefault();
@@ -505,20 +505,20 @@
 
       let ciCdIndex = 0;
 
-      const img = ciCdCarousel.querySelector('.carousel-image');
-      const prev = ciCdCarousel.querySelector('.carousel-btn.prev');
-      const next = ciCdCarousel.querySelector('.carousel-btn.next');
+      const ciCdImg = ciCdCarousel.querySelector('.carousel-image');
+      const ciCdPrev = ciCdCarousel.querySelector('.carousel-btn.prev');
+      const ciCdNext = ciCdCarousel.querySelector('.carousel-btn.next');
 
-      prev.addEventListener('click', (e) => {
+      ciCdPrev.addEventListener('click', (e) => {
         e.stopPropagation();
         ciCdIndex = (ciCdIndex - 1 + ciCdImages.length) % ciCdImages.length;
-        img.src = ciCdImages[ciCdIndex];
+        ciCdImg.src = ciCdImages[ciCdIndex];
       });
 
-      next.addEventListener('click', (e) => {
+      ciCdNext.addEventListener('click', (e) => {
         e.stopPropagation();
         ciCdIndex = (ciCdIndex + 1) % ciCdImages.length;
-        img.src = ciCdImages[ciCdIndex];
+        ciCdImg.src = ciCdImages[ciCdIndex];
       });
     }
 
@@ -526,32 +526,37 @@
        LIIKETOIMINTA CAROUSEL
        =============================== */
 
+    /* ===============================
+    LIIKETOIMINTA CAROUSEL
+    =============================== */
+
     const businessCarousel = document.querySelector('.carousel-liiketoiminta');
 
     if (businessCarousel) {
       const businessImages = [
-        'images/instagram.png',      // IG-tili
-        'images/pitch-note.png',     // käsinkirjoitettu pitch-kuva
+        'images/instagram.png',
+        'images/pitch-note.png',
       ];
 
       let businessIndex = 0;
 
-      const img = businessCarousel.querySelector('.carousel-image');
-      const prev = businessCarousel.querySelector('.carousel-btn.prev');
-      const next = businessCarousel.querySelector('.carousel-btn.next');
+      const businessImg = businessCarousel.querySelector('.carousel-image');
+      const businessPrev = businessCarousel.querySelector('.carousel-btn.prev');
+      const businessNext = businessCarousel.querySelector('.carousel-btn.next');
 
-      prev.addEventListener('click', (e) => {
+      businessPrev.addEventListener('click', (e) => {
         e.stopPropagation();
         businessIndex = (businessIndex - 1 + businessImages.length) % businessImages.length;
-        img.src = businessImages[businessIndex];
+        businessImg.src = businessImages[businessIndex];
       });
 
-      next.addEventListener('click', (e) => {
+      businessNext.addEventListener('click', (e) => {
         e.stopPropagation();
         businessIndex = (businessIndex + 1) % businessImages.length;
-        img.src = businessImages[businessIndex];
+        businessImg.src = businessImages[businessIndex];
       });
     }
+
 
 
     /* ===============================
@@ -572,20 +577,20 @@
 
       let uiIndex = 0;
 
-      const img = uiCarousel.querySelector('.carousel-image');
-      const prev = uiCarousel.querySelector('.carousel-btn.prev');
-      const next = uiCarousel.querySelector('.carousel-btn.next');
+      const uiImg = uiCarousel.querySelector('.carousel-image');
+      const uiPrev = uiCarousel.querySelector('.carousel-btn.prev');
+      const uiNext = uiCarousel.querySelector('.carousel-btn.next');
 
-      prev.addEventListener('click', (e) => {
+      uiPrev.addEventListener('click', (e) => {
         e.stopPropagation();
         uiIndex = (uiIndex - 1 + uiImages.length) % uiImages.length;
-        img.src = uiImages[uiIndex];
+        uiImg.src = uiImages[uiIndex];
       });
 
-      next.addEventListener('click', (e) => {
+      uiNext.addEventListener('click', (e) => {
         e.stopPropagation();
         uiIndex = (uiIndex + 1) % uiImages.length;
-        img.src = uiImages[uiIndex];
+        uiImg.src = uiImages[uiIndex];
       });
     }
   </script>
