@@ -333,7 +333,7 @@
               </div>
 
               <div class="timeline-visual">
-                <div class="carousel-card carousel-ci-cd">
+                <div class="carousel-card carousel-liiketoiminta">
                   <button class="carousel-btn prev" aria-label="Edellinen kuva">‹</button>
                   <img src="images/instagram.png" alt="Kuva Instagram- tilistä" class="carousel-image enlargeable">
                   <button class="carousel-btn next" aria-label="Seuraava kuva">›</button>
@@ -523,7 +523,39 @@
     }
 
     /* ===============================
-       UI CAROUSEL
+       LIIKETOIMINTA CAROUSEL
+       =============================== */
+
+    const businessCarousel = document.querySelector('.carousel-liiketoiminta');
+
+    if (businessCarousel) {
+      const businessImages = [
+        'images/instagram.png',      // IG-tili
+        'images/pitch-note.png',     // käsinkirjoitettu pitch-kuva
+      ];
+
+      let businessIndex = 0;
+
+      const img = businessCarousel.querySelector('.carousel-image');
+      const prev = businessCarousel.querySelector('.carousel-btn.prev');
+      const next = businessCarousel.querySelector('.carousel-btn.next');
+
+      prev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        businessIndex = (businessIndex - 1 + businessImages.length) % businessImages.length;
+        img.src = businessImages[businessIndex];
+      });
+
+      next.addEventListener('click', (e) => {
+        e.stopPropagation();
+        businessIndex = (businessIndex + 1) % businessImages.length;
+        img.src = businessImages[businessIndex];
+      });
+    }
+
+
+    /* ===============================
+       SOVELLUSKUVAT CAROUSEL
        =============================== */
 
     const uiCarousel = document.querySelector('.carousel-ui');
