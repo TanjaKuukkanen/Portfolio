@@ -160,6 +160,7 @@ h2 {
 
 .expertise-card li {
   margin-bottom: 0.4rem;
+  color: var(--muted);
 }
 
 /* =========================
