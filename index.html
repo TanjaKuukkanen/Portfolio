@@ -196,11 +196,16 @@
                   <li>Sprinttikohtainen työmäärän ja aikataulujen arviointi tarkemmin</li>
                 </ul>
               </div>
-
               <div class="timeline-visual">
-                <img class="timeline-image" src="images/projektinhallinta.png"
-                  alt="kuva projektinhallinnasta github projects">
+                <div class="carousel-project-management">
+                  <button class="carousel-btn prev" aria-label="Edellinen kuva">‹</button>
+                  <img src="images/projektinhallinta.png" alt="kuva projektinhallinnasta github projects"
+                    class="carousel-image enlargeable">
+                  <button class="carousel-btn next" aria-label="Seuraava kuva">›</button>
+                </div>
               </div>
+
+
             </div>
           </div>
         </article>
@@ -295,12 +300,10 @@
               </div>
 
               <div class="timeline-visual">
-                <div class="carousel-card carousel-ci-cd">
-                  <button class="carousel-btn prev" aria-label="Edellinen kuva">‹</button>
-                  <img src="images/deploy.png" alt="CI/CD-putki AWS:ssä" class="carousel-image enlargeable">
-                  <button class="carousel-btn next" aria-label="Seuraava kuva">›</button>
-                </div>
+                <img class="timeline-image" src="images/julkaisuputki.png" alt="kaaviokuva julkaisuputkista">
               </div>
+
+
             </div>
           </div>
         </article>
@@ -525,38 +528,39 @@
       });
 
     /* ===============================
-       CI/CD CAROUSEL
+       PROJEKTINHALLINTA CAROUSEL
        =============================== */
+    const projectManagementCarousel = document.querySelector('.carousel-project-management');
 
-    const ciCdCarousel = document.querySelector('.carousel-ci-cd');
-
-    if (ciCdCarousel) {
-      const ciCdImages = [
-        'images/deploy.png',
-        'images/buildspecfrontend.png',
-        'images/buildspecbackend.png',
-        'images/codepipeline.png',
-        'images/codepipelinebackend.png'
+    if (projectManagementCarousel) {
+      const projectManagementImages = [
+        'images/projektinhallinta.png',
+        'images/PB.png',
       ];
 
-      let ciCdIndex = 0;
+      let projectManagementIndex = 0;
 
-      const ciCdImg = ciCdCarousel.querySelector('.carousel-image');
-      const ciCdPrev = ciCdCarousel.querySelector('.carousel-btn.prev');
-      const ciCdNext = ciCdCarousel.querySelector('.carousel-btn.next');
+      const projectManagementImg = projectManagementCarousel.querySelector('.carousel-image');
+      const projectManagementPrev = projectManagementCarousel.querySelector('.carousel-btn.prev');
+      const projectManagementNext = projectManagementCarousel.querySelector('.carousel-btn.next');
 
-      ciCdPrev.addEventListener('click', (e) => {
+      projectManagementPrev.addEventListener('click', (e) => {
         e.stopPropagation();
-        ciCdIndex = (ciCdIndex - 1 + ciCdImages.length) % ciCdImages.length;
-        ciCdImg.src = ciCdImages[ciCdIndex];
+        projectManagementIndex =
+          (projectManagementIndex - 1 + projectManagementImages.length) %
+          projectManagementImages.length;
+        projectManagementImg.src = projectManagementImages[projectManagementIndex];
       });
 
-      ciCdNext.addEventListener('click', (e) => {
+      projectManagementNext.addEventListener('click', (e) => {
         e.stopPropagation();
-        ciCdIndex = (ciCdIndex + 1) % ciCdImages.length;
-        ciCdImg.src = ciCdImages[ciCdIndex];
+        projectManagementIndex =
+          (projectManagementIndex + 1) %
+          projectManagementImages.length;
+        projectManagementImg.src = projectManagementImages[projectManagementIndex];
       });
     }
+
 
     /* ===============================
        LIIKETOIMINTA CAROUSEL
