@@ -162,7 +162,7 @@
         ryhmän kanssa.
       </p>
 
-      <p><a href="https://github.com/jamktiko/RekoRinki">katso REKO -projekti GitHubissa</a> </p>
+      <p><a href="https://github.com/jamktiko/RekoRinki">Katso REKO -projekti GitHubissa</a> </p>
 
     </section>
 
@@ -260,7 +260,7 @@
                   Projektissa frontend ja backend rakennettiin erillisinä kokonaisuuksina,
                   joissa frontend jaettiin S3:n ja CloudFrontin kautta ja backend ajettiin Elastic Beanstalk
                   -ympäristössä ja se kommunikoi RDS-tietokannan kanssa private subnetin kautta, mikä selkeytti
-                  arkkitehtuurin ja tietoturvan roolia pilviympäristössä. Ratkaisut olivat minulle uusia, ja niiden
+                  arkkitehtuurin ja tietoturvan roolia pilviympäristössä. Osa ratkaisuista oli minulle uusia, ja niiden
                   ymmärtäminen osana toimivaa sovelluskokonaisuutta oli merkittävä oppimiskokemus ja syvensi
                   ymmärrystäni pilviarkkitehtuurin suunnittelusta käytännössä.
                 </p>
@@ -289,16 +289,17 @@
               <div class="timeline-text">
                 <p class="lead">
                   CI/CD-julkaisuputken rakentaminen oli minulle täysin uusi asia, eikä minulla ollut aiempaa käytännön
-                  kokemusta automaattisista julkaisuputkista. Projektin aikana opin, miten sovellus saadaan julkaistua
-                  automaattisesti siten, että koodimuutokset etenevät build- ja deploy-vaiheiden kautta AWS-ympäristöön,
-                  ja ymmärsin julkaisuautomaation merkityksen osana toimivaa ohjelmistokehitystä. Projektissa rakensimme
-                  ensin GitHub Actionsiin toteutetun julkaisupolun ja myöhemmin AWS CodePipeline -ratkaisun, mikä auttoi
-                  hahmottamaan CI/CD-prosessin eri toteutustapoja ja niiden roolia osana kehitysprosessia.
+                  kokemusta automaattisista julkaisuputkista. Projektin aikana opin, miten sovelluksen julkaisu voidaan
+                  automatisoida siten, että koodimuutokset etenevät hallitusti build-vaiheen kautta osana
+                  CI/CD-prosessia, ja ymmärsin julkaisuautomaation merkityksen toimivassa ohjelmistokehityksessä.
+                  Projektissa rakensimme ensin GitHub Actionsiin toteutetun julkaisupolun ja myöhemmin AWS CodePipeline
+                  -ratkaisun, mikä auttoi hahmottamaan CI/CD-prosessin eri toteutustapoja ja niiden roolia osana
+                  kehitysprosessia.
                 </p>
 
                 <ul class="key-points">
                   <li>GitHub Actions- ja AWS CodePipeline -julkaisuputkien toteutus</li>
-                  <li>Build- ja deploy-vaiheiden automatisointi</li>
+                  <li>Julkaisuputken automatisointi</li>
                   <li>Sovelluksen elinkaaren hahmottaminen CI/CD-prosessin kautta</li>
                 </ul>
               </div>
@@ -462,7 +463,8 @@
       <p>
         Projektin aikana pääsin tutustumaan myös frontend-kehitykseen Angularilla, joka ei ollut minulle entuudestaan
         tuttua. Opiskelun myötä kiinnostukseni frontend-kehitystä kohtaan kasvoi, ja haluan kehittää osaamistani
-        sillä alueella jatkossa. Koska ryhmässämme ei ollut erillistä testaajaa, perehdyin myös testaukseen Cypressin ja
+        sillä alueella jatkossa. Opiskelin hieman myös backendia, että ymmärsin, miten se yhdistyy frontendin ja
+        tietokannan kanssa. Koska ryhmässämme ei ollut erillistä testaajaa, perehdyin myös testaukseen Cypressin ja
         Vitestin avulla sekä tein myös saavutettavuustestausta eri työkaluilla. Toteutimme toisen ryhmäläisen kanssa
         muutamien käyttäjäpolkujen testejä Cypressillä sekä
         yksikkötestausta Vitestillä frontendin puolella. Ryhmätyöskentelyssä opin ottamaan aktiivisen roolin projektin
