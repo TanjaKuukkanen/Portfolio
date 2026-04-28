@@ -3,6 +3,7 @@
 Tämä repositorio sisältää henkilökohtaisen portfolioni,
 joka kuvaa työskentelyäni Ticorporaten Demo Labissa sekä oppimistani 
 REKO-sovellusprojektin parissa osana kolmannen opiskeluvuoden opintoja.
+Projekti kesti noin 4 kuukautta.
 
 Portfoliossa esittelen projektin keskeisiä vaiheita, omia roolejani ja vastuitani
 sekä sitä, miten osaamiseni kehittyi projektin aikana.
